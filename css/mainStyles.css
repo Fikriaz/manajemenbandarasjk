@@ -541,6 +541,12 @@ video {
   }
 }
 
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
 .fixed {
   position: fixed;
 }
