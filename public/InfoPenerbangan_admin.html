@@ -7,18 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sidebar</title>
   <link rel="stylesheet" href="../css/mainStyles.css">
- 
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
     rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 
-<body class="bg-white font-[Poppins]">
+<body class="bg-white  font-[Poppins]">
   <header>
     <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="Openbar()">
-      <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14 px-2   bg-gray-900 rounded-md">
-        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-      </svg>
+      <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
     </span>
     <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000
       p-2 w-[300px] overflow-y-auto text-center bg-white shadow-2xl h-screen">
@@ -45,7 +43,6 @@
         <hr class="my-2 text-black">
 
         <div>
-          <a href="../public/sidebar.html">
           <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
             <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
@@ -53,16 +50,12 @@
             
             <span class="text-[15px] ml-4 text-black">Dashboard</span>
           </div>
-          </a>
           <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
             <img src="../img/flight-information.png" class="w-7">
             <div class="flex justify-between w-full items-center" onclick="dropDown()">
               <span class="text-[15px] ml-4 text-black">Terminal</span>
               <span class="text-sm rotate-180" id="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                  <path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clip-rule="evenodd" />
-                </svg>
-                
+                <i class="bi bi-chevron-down"></i>
               </span>
             </div>
           </div>
@@ -95,7 +88,7 @@
           </div>
 
         
-          <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  bg-[#38AECC]">
+          <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600">
             <img src="../img/Untitled-1.png" class="w-10 -ml-1">
             <span class="text-[15px] ml-2 text-black">Pengajuan</span>
           </div>
@@ -103,78 +96,397 @@
         </div>
       </div>
     </div>
-  </header>
-  <main class="max-lg:mt-12 lg:ml-80 ">
-    <div class="p-10">
-        <div class="mb-5">
-            <h1 class="text-2xl font-semibold text-sky-900">Ajukan Penerbangan</h1>
-        </div>
-        <div class="my-3">
-            <p class="">No. Registrasi Pesawat</p>
-            <input type="text" name="RegPesawat" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div class="my-3">
-            <p class="">Jenis Pesawat</p>
-            <input type="text" name="JenisPesawat" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div class="my-3">
-            <p class="">Nama Maskapai</p>
-            <input type="text" name="NamaMaskapai" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div class="my-3">
-            <p class="">Jenis Penerbangan</p>
-            <select name="" id="" class="bg-gray-50 border border-gray-300 rounded-md">
-                <option value="">Penerbangan Komersial</option>
-                <option value="">Penerbangan Pribadi</option>
-            </select>
-        </div>
-        <div class="my-3">
-            <p class="">Rute</p>
-            <div class="grid gap-2 mb-2 md:grid-cols-2">
-                <div>
-                    <input type="text" name="BandaraAsal" id="" placeholder="Bandara Asal" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-                </div>
-                <div>
-                    <input type="text" name="BandaraTujuan" id="" placeholder="Bandara Tujuan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-                </div>
-            </div>    
-        </div>
-        <div class="my-3">
-            <p class="">Kode Penerbangan</p>
-            <input type="text" name="KodeTerbang" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div class="my-3">
-            <p class="">Jadwal Penerbangan</p>
-            <div class="grid gap-2 mb-2 md:grid-cols-2">
-                <div>
-                    <input type="text" name="JamBerangkat" id="" placeholder="Jam Keberangkatan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-                </div>
-                <div>
-                    <input type="text" name="JamDatang" id="" placeholder="Jam Kedatangan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-                </div>
-            </div>    
-        </div>
-        <div class="my-3">
-            <p class="">Nama Pilot yang Bertugas</p>
-            <input type="text" name="NamaPilot" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div class="my-3">
-            <p class="">Nama Co-Pilot yang Bertugas</p>
-            <input type="text" name="NamaCoPilot" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div class="my-3">
-            <p class="">Jumlah Kru yang bertugas</p>
-            <input type="text" name="JumlahKru" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div>
-            <p class="">Jumlah Penumpang</p>
-            <input type="text" name="JumlahPenumpang" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        </div>
-        <div class="mt-5">
-            <input type="submit" name="AjukanTerbang" id="" value="Ajukan Penerbangan" class="text-white bg-[#38AECC] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    </header>
+    <main class="lg:ml-80 ">
+      <div class="overflow-x-auto relative bg-slate-100 p-10">
+        <div class="overflow-x-auto relative shadow-md rounded-xl bg-white">
+            <table class="w-full text-sm text-center mt-3">
+                <caption class="mb-3 px-3">
+                    <h1 class="text-sky-900 text-3xl text-left font-bold">
+                        Jadwal Penerbangan
+                    </h1>
+                </caption>
+                <thead class="">
+                  <tr class="bg-slate-200">
+                      <th colspan="2" scope="col" class="py-3 px-6">
+                          Users/Maskapai
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Jenis Penerbangan
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Kode Penerbangan
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Rute
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Take Off
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Landing
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                           Action
+                      </th>
+                  </tr>
+                </thead>
+                <tbody class="mb-5">
+                  <tr class="bg-white border-b">
+                      <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Garuda Indonesia
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Penerbangan Komersial
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          GA-321
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Makassar
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          06.15
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          08.00
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                      </th>
+                  </tr>
+
+                  <tr class="bg-white border-b">
+                      <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Garuda Indonesia
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Penerbangan Komersial
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          GA-234
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Surabaya
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          06.45
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          07.30
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                      </th>
+                  </tr>
+
+                  <tr class="bg-white border-b">
+                      <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Garuda Indonesia
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Penerbangan Komersial
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          GA-345
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Bali
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          07.00
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          09.15
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                      </th>
+                  </tr>
+
+                  <tr class="bg-white border-b">
+                      <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Garuda Indonesia
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Penerbangan Komersial
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          GA-456
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          Singapura
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          07.25
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          09.15
+                      </th>
+                      <th scope="col" class="py-3 px-6">
+                          <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                      </th>
+                  </tr>
+
+                  <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-567
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Bandung
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        07.30
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        08.45
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-678
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Balikpapan
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        07.45
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        09.10
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-789
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Bangkok
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        08.05
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        11.15
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+                
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-987
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Bali
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        08.05
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        10.20
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-876
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Batam
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        08.25
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        11.05
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-765
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Lombok
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        08.30
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        11.45
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-654
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Jayapura
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        09.15
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        13.45
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-543
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Yogyakarta
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        09.20
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        10.10
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+
+                <tr class="bg-white border-b">
+                    <th scope="col" class="py-3 px-6">
+                        <img src="../img/garuda.png" alt="" class="w-24 mx-auto">
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Garuda Indonesia
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Penerbangan Komersial
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        GA-432
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Tokyo
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        09.45
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        17.10
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <a href="#" class="font-medium text-blue-600 hover:underline">Info</a>
+                    </th>
+                </tr>
+                </tbody>
+              </table>
         </div>
     </div>
-</main>
+    </main>
   <script>
     function dropDown() {
       document.querySelector('#submenu').classList.toggle('hidden')
@@ -189,3 +501,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
